@@ -52,7 +52,7 @@ export default function App() {
           name='Contact'
           component={ContactScreen}
           options={{
-            tabBarLabel: 'Contact',
+            tabBarLabel: 'Contacts',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name='contacts'
