@@ -1,10 +1,65 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import {
+  Container,
+  Content,
+  Header,
+  List,
+  ListItem,
+  Left,
+  Right,
+  Thumbnail,
+  Body,
+  Text,
+  Title,
+} from 'native-base';
+
+const contactsData = [
+  {
+    name: 'Charlie McCharles',
+    title: 'CEO',
+    company: 'Baskets International LLC',
+    pic: 'https://randomuser.me/portraits/men/1.jpg',
+  },
+  {
+    name: 'Desiree Dee',
+    title: 'CMO',
+    company: 'Busket Inc',
+    pic: 'https://randomuser.me/portraits/women/1.jpg',
+  },
+  {
+    name: 'Adam ellis',
+    title: 'CTO',
+    company: 'Baskets of Biskits',
+    pic: 'https://randomuser.me/portraits/men/2.jpg',
+  },
+];
 
 export default function ContactScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Contacts!</Text>
-    </View>
+    <Container>
+      <Header>
+        <Body>
+          <Title>Contact Lists</Title>
+        </Body>
+      </Header>
+      <Content>
+        <List>
+          {contactsData.map((item) => (
+            <ListItem avatar>
+              <Left>
+                <Thumbnail source={{ uri: item.pic }} />
+              </Left>
+              <Body>
+                <Text>{item.name}</Text>
+                <Text note>
+                  {item.title}, {item.company}
+                </Text>
+              </Body>
+            </ListItem>
+          ))}
+        </List>
+      </Content>
+    </Container>
   );
 }

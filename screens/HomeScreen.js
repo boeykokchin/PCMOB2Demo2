@@ -62,8 +62,8 @@ function Home({ navigation }) {
                 source={require('../assets/pic1.png')}
               />
               <Text>
-                Come celebrate the end of THIS administration by throwing poop
-                at NYC square!
+                Throw poop and celebrate the end of THIS administration at NYC
+                square!
               </Text>
             </Body>
           </CardItem>
