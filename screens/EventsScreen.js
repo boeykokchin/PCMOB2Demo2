@@ -41,13 +41,33 @@ const Stack = createStackNavigator();
 export default function EventsStack() {
   return (
     <Stack.Navigator
+      initialRouteName='EventsHome'
       screenOptions={{
         headerTintColor: 'orange',
+        gestureEnabled: true,
       }}
     >
-      <Stack.Screen name='EventsHome' component={EventsHomeScreen} />
-      <Stack.Screen name='Events2ndScreen' component={EventsSecondScreen} />
-      <Stack.Screen name='Events3rdScreen' component={EventsThirdScreen} />
+      <Stack.Screen
+        name='EventsHome'
+        component={EventsHomeScreen}
+        options={{
+          title: 'Events Home Screen',
+        }}
+      />
+      <Stack.Screen
+        name='Events2ndScreen'
+        component={EventsSecondScreen}
+        options={{
+          title: 'Events 2nd Screen',
+        }}
+      />
+      <Stack.Screen
+        name='Events3rdScreen'
+        component={EventsThirdScreen}
+        options={{
+          title: 'Events 3rd Screen',
+        }}
+      />
     </Stack.Navigator>
   );
 }
